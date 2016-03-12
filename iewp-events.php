@@ -7,3 +7,13 @@
  * Version: 0.0.1
  * Author URI: https://corenominal.org
  */
+
+/**
+ * Include the custom post type
+ */
+require_once( plugin_dir_path( __FILE__ ) . 'custom-post-types/events.php' );
+
+/**
+ * Include the admin pages
+ */
+require_once( plugin_dir_path( __FILE__ ) . 'admin/events.php' );
