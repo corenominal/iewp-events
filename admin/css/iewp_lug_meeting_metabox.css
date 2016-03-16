@@ -1,25 +1,25 @@
-.iewp-events .meta-row {
+.iewp-lug-meeting .meta-row {
 	margin-bottom: 20px;
 }
 
-.iewp-events fieldset {
+.iewp-lug-meeting fieldset {
 	border: 1px solid #ccc;
 	padding: 20px;
 	margin-bottom: 20px;
 }
 
-.iewp-events legend {
+.iewp-lug-meeting legend {
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	font-weight: bold;
 }
 
-.iewp-events label {
+.iewp-lug-meeting label {
 	display: block;
 	font-weight: bold;
 	margin-bottom: 4px;
 }
 
-.iewp-events input.fw {
+.iewp-lug-meeting input.fw {
 	width: 100%;
 }

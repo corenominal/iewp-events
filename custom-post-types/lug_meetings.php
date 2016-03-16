@@ -2,11 +2,11 @@
 /**
  * Custom Post Type
  */
-function iewp_register_post_type_event()
+function iewp_register_post_type_lug_meeting()
 {
 	
-	$singular = 'Event';
-	$plural = 'Events';
+	$singular = 'LUG Meeting';
+	$plural = 'LUG Meetings';
 	$slug = str_replace( ' ', '_', strtolower( $singular ) );
 
 	$labels = array(
@@ -62,4 +62,4 @@ function iewp_register_post_type_event()
 	);
 	register_post_type( $slug, $args );
 }
-add_action( 'init', 'iewp_register_post_type_event' );
+add_action( 'init', 'iewp_register_post_type_lug_meeting' );
