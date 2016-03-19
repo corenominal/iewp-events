@@ -174,9 +174,9 @@ function iewp_lug_meeting_save_values( $post_id )
 				   'iewp_lug_meeting_venue_address_city',
 				   'iewp_lug_meeting_venue_address_county',
 				   'iewp_lug_meeting_venue_address_postcode',
-				   'iewp_lug_meeting_venue_ticket_name',
-				   'iewp_lug_meeting_venue_ticket_price',
-				   'iewp_lug_meeting_venue_ticket_url'
+				   'iewp_lug_meeting_ticket_name',
+				   'iewp_lug_meeting_ticket_price',
+				   'iewp_lug_meeting_ticket_url'
 				 );
 	foreach ( $keys as $key )
 	{

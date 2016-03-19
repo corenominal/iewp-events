@@ -49,3 +49,8 @@ require_once( plugin_dir_path( __FILE__ ) . 'admin/metaboxes.php' );
  * Settings page
  */
 require_once( plugin_dir_path( __FILE__ ) . 'admin/settings_page.php' );
+
+/**
+ * Structured data
+ */
+require_once( plugin_dir_path( __FILE__ ) . 'templates/structured_data.php' );
