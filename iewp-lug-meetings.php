@@ -54,3 +54,8 @@ require_once( plugin_dir_path( __FILE__ ) . 'admin/settings_page.php' );
  * Structured data
  */
 require_once( plugin_dir_path( __FILE__ ) . 'templates/structured_data.php' );
+
+/**
+ * Return post meta
+ */
+require_once( plugin_dir_path( __FILE__ ) . 'templates/post_meta.php' );
