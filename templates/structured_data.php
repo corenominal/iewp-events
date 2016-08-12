@@ -1,4 +1,5 @@
 <?php
+if ( ! defined( 'WPINC' ) ) { die('Direct access prohibited!'); }
 /**
  * Function to return array of structured data
  */
@@ -23,7 +24,7 @@ function iewp_lug_meeting_get_structured_data( $id )
 
 	$data['ticket_name'] = get_post_meta( $id, 'iewp_lug_meeting_ticket_name', true );
 	$data['ticket_price'] = get_post_meta( $id, 'iewp_lug_meeting_ticket_price', true );
-	
+
 	$data['ticket_url'] = $data['event_url'];
 	if( get_post_meta( $id, 'iewp_lug_meeting_ticket_url', true ) != '' )
 		$data['ticket_url'] = get_post_meta( $id, 'iewp_lug_meeting_ticket_url', true );

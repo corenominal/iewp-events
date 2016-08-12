@@ -1,4 +1,5 @@
 <?php
+if ( ! defined( 'WPINC' ) ) { die('Direct access prohibited!'); }
 /**
  * Settings page for entering default meeting details
  */
@@ -23,7 +24,7 @@ add_action('admin_menu' , 'iewp_lug_meetings_settings_menu');
 
 /**
  * Register custom settings
- */ 
+ */
 function iewp_lug_meetings_register()
 {
 	/**
@@ -66,7 +67,7 @@ function iewp_lug_meetings_register()
 		'iewp_lug_meetings_group', // option group
 		'iewp_lug_meetings_default_ticket_url' // option name
 		);
-	
+
 	/**
 	 * Create the settings section for this group of settings
 	 */
@@ -76,7 +77,7 @@ function iewp_lug_meetings_register()
 		'iewp_lug_meetings_options', // callback
 		'iewp_lug_meetings_options' // page
 		);
-	
+
 	/**
 	 * Add the settings fields
 	 */
@@ -85,42 +86,42 @@ function iewp_lug_meetings_register()
 		'Venue Name', // title/label
 		'iewp_lug_meetings_default_venue_name', // callback
 		'iewp_lug_meetings_options', // page
-		'iewp-lug-meetings-options' // settings section 
+		'iewp-lug-meetings-options' // settings section
 		);
 	add_settings_field(
 		'iewp-lug-meetings-default-venue-website', // id
 		'Venue Website', // title/label
 		'iewp_lug_meetings_default_venue_website', // callback
 		'iewp_lug_meetings_options', // page
-		'iewp-lug-meetings-options' // settings section 
+		'iewp-lug-meetings-options' // settings section
 		);
 	add_settings_field(
 		'iewp-lug-meetings-default-venue-address-street', // id
 		'Venue Street Address', // title/label
 		'iewp_lug_meetings_default_venue_address_street', // callback
 		'iewp_lug_meetings_options', // page
-		'iewp-lug-meetings-options' // settings section 
+		'iewp-lug-meetings-options' // settings section
 		);
 	add_settings_field(
 		'iewp-lug-meetings-default-venue-address-city', // id
 		'Venue City', // title/label
 		'iewp_lug_meetings_default_venue_address_city', // callback
 		'iewp_lug_meetings_options', // page
-		'iewp-lug-meetings-options' // settings section 
+		'iewp-lug-meetings-options' // settings section
 		);
 	add_settings_field(
 		'iewp-lug-meetings-default-venue-address-county', // id
 		'Venue County', // title/label
 		'iewp_lug_meetings_default_venue_address_county', // callback
 		'iewp_lug_meetings_options', // page
-		'iewp-lug-meetings-options' // settings section 
+		'iewp-lug-meetings-options' // settings section
 		);
 	add_settings_field(
 		'iewp-lug-meetings-default-venue-address-postcode', // id
 		'Venue Postcode', // title/label
 		'iewp_lug_meetings_default_venue_address_postcode', // callback
 		'iewp_lug_meetings_options', // page
-		'iewp-lug-meetings-options' // settings section 
+		'iewp-lug-meetings-options' // settings section
 		);
 
 	add_settings_field(
@@ -128,21 +129,21 @@ function iewp_lug_meetings_register()
 		'Ticket Name', // title/label
 		'iewp_lug_meetings_default_ticket_name', // callback
 		'iewp_lug_meetings_options', // page
-		'iewp-lug-meetings-options' // settings section 
+		'iewp-lug-meetings-options' // settings section
 		);
 	add_settings_field(
 		'iewp-lug-meetings-default-ticket-price', // id
 		'Ticket Price', // title/label
 		'iewp_lug_meetings_default_ticket_price', // callback
 		'iewp_lug_meetings_options', // page
-		'iewp-lug-meetings-options' // settings section 
+		'iewp-lug-meetings-options' // settings section
 		);
 	add_settings_field(
 		'iewp-lug-meetings-default-ticket-url', // id
 		'Ticket URL', // title/label
 		'iewp_lug_meetings_default_ticket_url', // callback
 		'iewp_lug_meetings_options', // page
-		'iewp-lug-meetings-options' // settings section 
+		'iewp-lug-meetings-options' // settings section
 		);
 }
 
@@ -228,7 +229,7 @@ function iewp_lug_meetings_settings_page_callback()
 
 		<?php settings_errors(); ?>
 		<form method="POST" action="options.php">
-			
+
 			<?php settings_fields( 'iewp_lug_meetings_group' ); ?>
 			<?php do_settings_sections( 'iewp_lug_meetings_options' ); ?>
 			<?php submit_button(); ?>

@@ -1,10 +1,11 @@
 <?php
+if ( ! defined( 'WPINC' ) ) { die('Direct access prohibited!'); }
 /**
  * Custom Post Type
  */
 function iewp_register_post_type_lug_meeting()
 {
-	
+
 	$singular = 'LUG Meeting';
 	$plural = 'LUG Meetings';
 	$slug = str_replace( ' ', '_', strtolower( $singular ) );
@@ -43,16 +44,16 @@ function iewp_register_post_type_lug_meeting()
 	        'query_var'           => true,
 	        'capability_type'     => 'post',
 	        'map_meta_cap'        => true,
-	        'rewrite'             => array( 
+	        'rewrite'             => array(
 	        	'slug' 			=> $slug,
 	        	'with_front' 	=> true,
 	        	'pages' 		=> true,
 	        	'feeds' 		=> true,
 	        ),
-	        'supports'            => array( 
-	        	'title', 
-	        	'editor', 
-	        	'author', 
+	        'supports'            => array(
+	        	'title',
+	        	'editor',
+	        	'author',
 	        	'custom-fields',
 	        	'thumbnail',
 	        	'excerpt',

@@ -1,4 +1,5 @@
 <?php
+if ( ! defined( 'WPINC' ) ) { die('Direct access prohibited!'); }
 /**
  * Custom metaboxes
  */
@@ -73,9 +74,9 @@ function iewp_lug_meeting_metabox_event_details_callback( $post )
 	?>
 
 	<div class="iewp-lug-meeting">
-		
+
 		<fieldset>
-    		
+
     		<legend>Date &amp; Time</legend>
 
 			<div class="meta-row">
@@ -91,7 +92,7 @@ function iewp_lug_meeting_metabox_event_details_callback( $post )
 		</fieldset>
 
 		<fieldset>
-    		
+
     		<legend>Tickets</legend>
 
 			<div class="meta-row">
@@ -111,11 +112,11 @@ function iewp_lug_meeting_metabox_event_details_callback( $post )
 			</div>
 
 		</fieldset>
-		
+
 		<fieldset>
-    		
+
     		<legend>The Venue</legend>
-			
+
 			<div class="meta-row">
 				<label>Name</label>
 				<input class="fw" type="text" placeholder="Name of venue ..." name="iewp_lug_meeting_venue_name" id="iewp_lug_meeting_venue_name" value="<?php echo $venue_name ?>">
@@ -125,7 +126,7 @@ function iewp_lug_meeting_metabox_event_details_callback( $post )
 				<label>Website</label>
 				<input class="fw" type="text" placeholder="http://www..." name="iewp_lug_meeting_venue_website" id="iewp_lug_meeting_venue_website" value="<?php echo $venue_website ?>">
 			</div>
-			
+
 			<div class="meta-row">
 				<label>Street Address</label>
 				<input class="fw" type="text" placeholder="1 Foo Street" name="iewp_lug_meeting_venue_address_street" id="iewp_lug_meeting_venue_address_street" value="<?php echo $venue_address_street ?>">
@@ -183,7 +184,7 @@ function iewp_lug_meeting_save_values( $post_id )
 		if ( isset( $_POST[$key] ) )
 		{
 			update_post_meta( $post_id, $key, sanitize_text_field( $_POST[ $key ] ) );
-			
+
 			// Do timestamps for start and enddates
 			if( $key == 'iewp_lug_meeting_startdate' )
 			{
@@ -204,7 +205,7 @@ add_action( 'save_post', 'iewp_lug_meeting_save_values' );
  */
 function iewp_lug_meeting_enqueue_scripts( $hook )
 {
-	
+
 	if( 'post.php' == $hook || 'post-new.php' == $hook )
 	{
 		global $post_type;

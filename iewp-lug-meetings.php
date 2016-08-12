@@ -1,4 +1,5 @@
 <?php
+if ( ! defined( 'WPINC' ) ) { die('Direct access prohibited!'); }
 /**
  * Plugin Name: IEWP LUG Meetings
  * Plugin URI: https://github.com/corenominal/iewp-lug-meetings
@@ -11,7 +12,7 @@
 /**
  * Plugin settings link
  */
-function iewp_lug_meetings_action_links( $actions, $plugin_file ) 
+function iewp_lug_meetings_action_links( $actions, $plugin_file )
 {
 	static $plugin;
 	if (!isset($plugin))
@@ -19,8 +20,8 @@ function iewp_lug_meetings_action_links( $actions, $plugin_file )
 	if ($plugin == $plugin_file)
 	{
 		$settings = array('settings' => '<a href="edit.php?post_type=lug_meeting&page=settings_page.php">' . __('Settings', 'General') . '</a>');
-	
-		$actions = array_merge($settings, $actions);	
+
+		$actions = array_merge($settings, $actions);
 	}
 	return $actions;
 }
